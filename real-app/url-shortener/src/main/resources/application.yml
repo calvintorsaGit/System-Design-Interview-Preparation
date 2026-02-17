@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: url-shortener
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5440/url_shortener
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+app:
+  machine-id: 1             # Snowflake ID: Unique per instance
